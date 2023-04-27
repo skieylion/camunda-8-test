@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_02ma26w" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.7.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <decision id="permits_table" name="permits">
+    <decisionTable id="DecisionTable_0d52uwt">
+      <input id="InputClause_06ez6c9" label="fullYearsOld">
+        <inputExpression id="LiteralExpression_0qanwg4" typeRef="number">
+          <text>fullYearsOld</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ckyq41" label="salary">
+        <inputExpression id="LiteralExpression_15wxtys" typeRef="number">
+          <text>salary</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ztuh71" label="score">
+        <inputExpression id="LiteralExpression_04l860l" typeRef="number">
+          <text>score</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_10vpobc" label="isCredit" name="isCredit" typeRef="boolean" />
+      <rule id="DecisionRule_1y3ttml">
+        <inputEntry id="UnaryTests_0zxfisc">
+          <text>&gt;=20</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05zvcf6">
+          <text>&gt;=100</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n0iojs">
+          <text>&gt;=2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14far25">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="DMNShape_1mx2mq6" dmnElementRef="permits_table">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
